@@ -105,8 +105,8 @@ function getCurrentYear() {
             mp.handlePlugins(serviceWorker);
             switch(prox) {
                 case "uv": {
-                    iframe.src = `${__uv$config.prefix}${__uv$config.encodeUrl!(val)}`;
-                    break;
+                iframe.src = "/service/" + btoa(val).replace(/\//g, "_").replace(/\+/g, "-").replace(/=/g, "");
+                break;
                 }
                 case "sj": {
                     const { sj } = await sw.getSWInfo();
