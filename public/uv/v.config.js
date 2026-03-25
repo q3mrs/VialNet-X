@@ -22,9 +22,9 @@ self.__uv$config = {
                 .join("") + (search.length ? "?" + search.join("?") : "")
         );
     },
-    handler: "/uv/uv.handler.js",
-    client: "/uv/uv.client.js",
-    bundle: "/uv/uv.bundle.js",
-    config: "/uv/uv.config.js",
-    sw: "/uv/uv.sw.js"
+    handler: "/uv/v.handler.js",
+    client: "/uv/v.client.js",
+    bundle: "/uv/v.bundle.js",
+    config: "/uv/v.config.js",
+    sw: "/uv/v.sw.js"
 };
