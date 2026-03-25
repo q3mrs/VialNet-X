@@ -8,7 +8,7 @@
     "start": "node server/server.js",
     "build:server": "tsc -p server",
     "build:client": "astro build",
-    "build": "npm run build:server & npm run build:client",
+    "build": "npm run build:client && npm run build:server",
     "bstart": "npm run build && npm run start",
     "preview": "astro preview",
     "astro": "astro",
