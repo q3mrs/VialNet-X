@@ -65,9 +65,6 @@ importers:
       '@rubynetwork/corlink-fastify':
         specifier: https://github.com/NebulaServices/corlink/releases/download/2.0.2/rubynetwork-corlink-fastify-2.0.2.tgz
         version: https://github.com/NebulaServices/corlink/releases/download/2.0.2/rubynetwork-corlink-fastify-2.0.2.tgz
-      '@titaniumnetwork-dev/ultraviolet':
-        specifier: ^3.2.10
-        version: 3.2.10
       '@types/node':
         specifier: ^22.10.2
         version: 22.15.32
