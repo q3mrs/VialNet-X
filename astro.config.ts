@@ -88,11 +88,6 @@ export default defineConfig({
                         src: `${baremuxPath}/**/*`.replace(/\\/g, "/"),
                         dest: "baremux",
                         overwrite: false
-                    },
-                    {
-                        src: `${workerwarePath}/**/*`.replace(/\\/g, "/"),
-                        dest: "workerware",
-                        overwrite: false
                     }
                 ]
             })
