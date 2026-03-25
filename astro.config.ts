@@ -65,7 +65,7 @@ export default defineConfig({
             viteStaticCopy({
                 targets: [
                     {
-                        src: `${uvPath}/**/*`.replace(/\\/g, "/"),
+                        src: `public/uv/**/*`.replace(/\\/g, "/"),
                         dest: "uv",
                         overwrite: false
                     },
