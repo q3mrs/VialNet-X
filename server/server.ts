@@ -17,6 +17,7 @@ import { parsedDoc } from "./config.js";
 import { setupDB } from "./dbSetup.js";
 import { catalogAssets, marketplaceAPI } from "./marketplace.js";
 import { serverFactory } from "./serverFactory.js";
+import { uvPath } from "@titaniumnetwork-dev/ultraviolet"; // Eğer paketi geri yüklersen bunu kullan
 
 const app = Fastify({
     logger: parsedDoc.server.server.logging,
@@ -69,6 +70,14 @@ if (parsedDoc.marketplace.enabled) {
 }
 
 await app.register(fastifyMiddie);
+
+// Proxy rotalarını yakalamak için middleware
+app.addHook('onRequest', async (request, reply) => {
+    if (request.url.startsWith('/service/')) {
+        // Burada proxy motorunun devreye girmesi lazım. 
+        // Eğer UV paketini sildiysen burası boş kalır ve 404 verir.
+    }
+});
 
 app.use(ssrHandler);
 
